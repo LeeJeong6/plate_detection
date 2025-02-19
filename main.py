@@ -2,9 +2,9 @@ import vi_quarter
 import bytetrack 
 import result_draw
 import video_creator
-video_path = '/mnt/hdd_6tb/seungeun/HuNature/sample_video/input/cctv50mm.mp4'
-frame_dir = '/mnt/hdd_6tb/bill0914/byte-tracking/original_frame'
-output_dir = '/mnt/hdd_6tb/bill0914/byte-tracking/final_result_frame' 
+video_path = 'original_video_path~.mp4'
+frame_dir = 'path_your_saved_original_frames'
+output_dir = 'path_your_saved_predicted_frames' 
 def result_print(object_ids):
     '''
     프레임별로 탐지한 bbox를 동영상으로 만들어 완성합니다
@@ -23,7 +23,7 @@ def result_print(object_ids):
    
         # result_draw 모듈의 함수를 호출하여 프레임에 ID, xyxy, confidence 그리기
         result_draw.draw_tracking_results(frame_idx, frame_objects, frame_dir, output_dir)
-    video_creator.create_video_from_frames("/mnt/hdd_6tb/bill0914/byte-tracking/final_result_frame","/mnt/hdd_6tb/bill0914/byte-tracking/output_video.avi")   
+    video_creator.create_video_from_frames(output_dir,"path_your_saved_video_root.avi")   
 
 if __name__ == '__main__':
     '''
