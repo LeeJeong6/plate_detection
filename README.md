@@ -12,7 +12,13 @@
 
 4.동영상으로 합치기
 
+main.py의 경로를 설정해야합니다
 
+<video_path>:원본 비디오
 
+<frame_dir>:원본 비디오의 프레임이 저장될 폴더
 
+<output_dir>:모델이 예측한 프레임이 저장될 폴더
+
+25번째 줄의 video_creator.create_video_from_frames(output_dir,동영상이 저장될 경로~.avi) #avi or mp4
 
